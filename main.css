@@ -6,10 +6,30 @@
 }
 
 .main-content {
-  background: url(https://images.unsplash.com/photo-1630756315543-f663dd195bcb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170)
-    no-repeat center center fixed;
+  /* background: url(./images/nature-pic.jpg) no-repeat; */
+  /* no-repeat center center fixed; */
+  background-attachment: fixed;
+  background-position: center center;
   background-size: cover;
   height: 92vh;
+  animation: changeBg ease 15s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes changeBg {
+  0%,
+  100% {
+    background-image: url("./images/old-car-pic.jpg");
+  }
+  25% {
+    background-image: url("./images/nature-pic.jpg");
+  }
+  50% {
+    background-image: url("./images/sunset-pic.jpg");
+  }
+  75% {
+    background-image: url("./images/circle-pic.jpg");
+  }
 }
 
 i {
@@ -17,7 +37,7 @@ i {
 }
 
 .logo {
-  height: 45px;
+  height: 75px;
   margin-left: 20px;
   padding: 0;
   background-size: contain;
